@@ -1,0 +1,21 @@
+       IDENTIFICATION DIVISION.
+       PROGRAM-ID. USAGE-COMP-2.
+       AUTHOR. 62160246.
+
+       DATA DIVISION.
+       WORKING-STORAGE SECTION.
+       01 A               PIC S9(8) USAGE DISPLAY.
+       01 AC USAGE COMP-2.
+       01 COMPUTE-RESULT USAGE COMP-2
+                                    VALUE 06.234567891E-24.
+       PROCEDURE DIVISION.
+           INITIALIZE A
+           MOVE '1234567' TO A.
+           MOVE '1234.12345' TO AC.
+           DISPLAY A.
+           DISPLAY 'LENGTH ' LENGTH OF A.
+           DISPLAY AC.
+           DISPLAY 'LENGTH ' LENGTH OF AC.
+           DISPLAY COMPUTE-RESULT.
+           DISPLAY 'LENGTH ' LENGTH OF COMPUTE-RESULT.
+           STOP RUN.

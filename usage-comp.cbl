@@ -1,0 +1,25 @@
+       IDENTIFICATION DIVISION.
+       PROGRAM-ID. USAGE-COMP.
+       AUTHOR. 62160246.
+
+       DATA DIVISION.
+       WORKING-STORAGE SECTION.
+       01 A      PIC S9(8) USAGE DISPLAY.
+       01 AC     PIC S9(8) USAGE COMPUTATIONAL.
+       01 GABC USAGE COMP.
+          05 GA  PIC 9(3).
+          05 GB  PIC 9(4)V99 DISPLAY.
+          05 GC  PIC S9(5) COMP SYNC.
+
+       PROCEDURE DIVISION.
+           INITIALIZE A
+           MOVE '1234567' TO A.
+           MOVE '1234567' TO AC.
+           DISPLAY A.
+           DISPLAY 'LENGTH ' LENGTH OF A.
+           DISPLAY AC.
+           DISPLAY 'LENGTH ' LENGTH OF AC.
+           DISPLAY 'LENGTH ' LENGTH OF GA.
+           DISPLAY 'LENGTH ' LENGTH OF GB.
+           DISPLAY 'LENGTH ' LENGTH OF GC.
+           STOP RUN.
